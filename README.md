@@ -11,6 +11,7 @@
 - Create an [Infura](https://infura.io/) account.
 
 #### Running the Node
+- Run `cd run-node`
 - Create `$PATH_TO_DIR/chainlink-volume` directory
 - Create `$PATH_TO_DIR/chainlink-volume/password.txt` - Password used within Chainlink node for access
 - Create `$PATH_TO_DIR/chainlink-volume/apicredntials.txt` - Credientials to login into the Chainlink UI
