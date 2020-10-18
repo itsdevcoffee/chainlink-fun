@@ -1,0 +1,25 @@
+version: '3'
+services:
+  database:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    env_file:
+      - database.env
+    volumes:
+      - /Library/PostgreSQL/9.6/data/:/var/lib/postgressql/data/
+  chainlink:
+    image: "smartcontract/chainlink"
+    env_file: .env
+    depends_on:
+      - database
+    ports:
+      - "6688:6688"
+    volumes:
+      - /Users/chrispena/chainlink-volume/:/chainlink/
+    command: node start --password /chainlink/password.txt --api /chainlink/apicredentials.txt
+
+volumes:
+  database-data:
+  chainlink-data:
+  
