@@ -8,10 +8,14 @@
 #### Requirements
 - Install [Docker](https://docs.docker.com/get-docker/)
 - Install [Postgres](https://www.postgresql.org/)
-- Create an [Infura](https://infura.io/) account.
+- Create an [Infura](https://infura.io/) account
+  - Click the `Projects` section and create a new project.
+  - In the `KEYS` section you will see a list of different credentials. Under `ENDPOINTS` tab change the select to `Ropsten`.
+  - Underneath this you will have two links. Notice the `wss://mainnet.infura.io/ws/v3/...` link. You will need this in a second
 
 #### Running the Node
 - Run `cd run-node`
+- Open the .env file and where `ETH_URL=INFURA_ROPSTEN_LINK_HERE` is paste your infura link.
 
 - Create `$PATH_TO_DIR/chainlink-volume` directory
 - Create `$PATH_TO_DIR/chainlink-volume/password.txt` - Password used within Chainlink node for access
