@@ -7,6 +7,7 @@ services:
     env_file:
       - database.env
     volumes:
+      # [PATH_TO_POSTGRES_DATA]:/var/lib/postgressql/data/
       - /Library/PostgreSQL/9.6/data/:/var/lib/postgressql/data/
   chainlink:
     image: "smartcontract/chainlink"
@@ -16,5 +17,6 @@ services:
     ports:
       - "6688:6688"
     volumes:
-      - /Users/chrispena/chainlink-fun/run-node/chainlink-volume/:/chainlink/
+      # [PATH_TO_REPO_CHAINLINK_VOLUME]:/chainlink/
+      - /Users/chrispena/chainlink-volume/:/chainlink/
     command: node start --password /chainlink/password.txt --api /chainlink/apicredentials.txt 
