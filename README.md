@@ -11,7 +11,7 @@
 - Create an [Infura](https://infura.io/) account
   - Click the `Projects` section and create a new project.
   - In the `KEYS` section you will see a list of different credentials. Under `ENDPOINTS` tab change the select to `Ropsten`.
-  - Underneath this you will have two links. Notice the `wss://mainnet.infura.io/ws/v3/...` link. You will need this in a second
+  - Underneath this you will have two links. Notice the `wss://ropsten.infura.io/ws/v3/...` link. You will need this in a second
 
 #### Running the Node
 - Run `cd run-node`
