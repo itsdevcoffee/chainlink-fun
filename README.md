@@ -8,10 +8,14 @@
 #### Requirements
 - Install [Docker](https://docs.docker.com/get-docker/)
 - Install [Postgres](https://www.postgresql.org/)
-- Create an [Infura](https://infura.io/) account.
+- Create an [Infura](https://infura.io/) account
+  - Click the `Projects` section and create a new project.
+  - In the `KEYS` section you will see a list of different credentials. Under `ENDPOINTS` tab change the select to `Ropsten`.
+  - Underneath this you will have two links. Notice the `wss://ropsten.infura.io/ws/v3/...` link. You will need this in a second
 
 #### Running the Node
 - Run `cd run-node`
+- Open the .env file and where `ETH_URL=INFURA_ROPSTEN_LINK_HERE` is paste your infura link.
 
 - Create `$PATH_TO_DIR/chainlink-volume` directory
 - Create `$PATH_TO_DIR/chainlink-volume/password.txt` - Password used within Chainlink node for access
@@ -30,7 +34,7 @@ chainlinkPassword
   - Docker -> Preferences -> Resources -> File Sharing
   - Add `$PATH_TO_DIR/chainlink-volume`
   - Add `$PATH_TO_POSTGRES_DATA`
-- Run `docker compose up` - This will run our docker-compose.yml and spin up a Postgres/Chainlink node instance.
+- Run `docker-compose up` - This will run our docker-compose.yml and spin up a Postgres/Chainlink node instance.
 - This will run our Postgres instance but fail when starting the Chainlink node because there is no `chainlink` postgres database created. We can solve this by entering the CLI of our Postgres(`pg_chainlink`) instance inside Docker.
 - Open the Docker dashboard and click on `chainlink-ropsten` then open the CLI for `chainlink-ropsten_database_1`.
 - Enter the Postgres console by typing: `psql -U postgres -h localhost`
