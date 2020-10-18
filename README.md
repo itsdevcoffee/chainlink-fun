@@ -31,7 +31,7 @@ chainlinkPassword
   - Add `$PATH_TO_DIR/chainlink-volume`
   - Add `$PATH_TO_POSTGRES_DATA`
 - Run `docker compose up` - This will run our docker-compose.yml and spin up a Postgres/Chainlink node instance.
-- This will run our Postgres instance but fail when starting the Chainlink node because there is no `chainlink` postgres database create. We can solve this by entering the CLI of our Postgres(`pg_chainlink`) instance inside Docker.
+- This will run our Postgres instance but fail when starting the Chainlink node because there is no `chainlink` postgres database created. We can solve this by entering the CLI of our Postgres(`pg_chainlink`) instance inside Docker.
 - Open the Docker dashboard and click on `chainlink-ropsten` then open the CLI for `chainlink-ropsten_database_1`.
 - Enter the Postgres console by typing: `psql -U postgres -h localhost`
 - Now create the database: `CREATE DATABASE chainlink;`
