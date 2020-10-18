@@ -1,6 +1,6 @@
 version: '3'
 services:
-  database:
+  pg_chainlink:
     image: "postgres"
     ports:
       - "5432:5432"
@@ -11,8 +11,8 @@ services:
   chainlink:
     image: "smartcontract/chainlink"
     env_file: .env
-    depends_on:
-      - database
+    pg_chainlink:
+      - pg_chainlink
     ports:
       - "6688:6688"
     volumes:
