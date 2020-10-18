@@ -13,7 +13,6 @@
 #### Running the Node
 - Run `cd run-node`
 
-##### Optionally create your `chainlink-volume` outside the repo directory
 - Create `$PATH_TO_DIR/chainlink-volume` directory
 - Create `$PATH_TO_DIR/chainlink-volume/password.txt` - Password used within Chainlink node for access
 Add the following:
@@ -26,7 +25,6 @@ Add the following:
 test@test.tech
 chainlinkPassword
 ```
----
 
 - Add shared paths to Docker
   - Docker -> Preferences -> Resources -> File Sharing
