@@ -40,7 +40,7 @@ chainlinkPassword
 - Enter the Postgres console by typing: `psql -U postgres -h localhost`
 - Now create the database: `CREATE DATABASE chainlink;`
 - Run `docker-compose up` once again and your Chainlink node should be running as expected.
-- Goto: `http://localhost:6688` and you will by greeted with a login page.
+- Goto: `http://localhost:6688` and you will be greeted with a login page.
 - Type in the credentials specified in your `apicredentials.txt` file and boom! You are logged into your locally running Chainlink node.
 - You can locate your account address by clicking on the `Configuration` tab in the top right corner and locating the ACCOUNT_ADDRESS key variable.
 - From here you should fund your address LINK and ETH. You can do that by copying your account address and going to the [LINK ropsten faucet](https://ropsten.chain.link/) and [ETH ropsten faucet](https://faucet.ropsten.be/).
