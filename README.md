@@ -7,13 +7,22 @@
 
 #### Requirements
 - Install [Docker](https://docs.docker.com/get-docker/)
+- Install [Postgres](https://www.postgresql.org/)
 - Create an [Infura](https://infura.io/) account.
 
 #### Running the Node
 - Create `$PATH_TO_DIR/chainlink-volume` directory
 - Create `$PATH_TO_DIR/chainlink-volume/password.txt` - Password used within Chainlink node for access
 - Create `$PATH_TO_DIR/chainlink-volume/apicredntials.txt` - Credientials to login into the Chainlink UI
+- Add shared paths to Docker
+  - Docker -> Preferences -> Resources -> File Sharing
+  - Add `$PATH_TO_DIR/chainlink-volume`
+  - Add `$PATH_TO_POSTGRES_DATA`
 - Run `docker compose up` - This will run our docker-compose.yml and spin up a Postgres/Chainlink node instance.
-
----
-### Run with [Chainlink Binary](https://hub.docker.com/r/smartcontract/chainlink/)
+- This will run our Postgres instance but fail when starting the Chainlink node because there is no `chainlink` postgres database create. We can solve this by entering the CLI of our Postgres(`pg_chainlink`) instance inside Docker.
+- Open the Docker dashboard and click on `chainlink-ropsten` then open the CLI for `chainlink-ropsten_database_1`.
+- Enter the Postgres console by typing: `psql -U postgres -h localhost`
+- Now create the database: `CREATE DATABASE chainlink;`
+- Run `docker compose up` once again and your Chainlink node should be running as expected.
+- Goto: `http://localhost:6688` and you will by greeted with a login page.
+- Type in the credentials specified in your `apicredentials.txt` file and boom! You are logged into your locally running Chainlink node.

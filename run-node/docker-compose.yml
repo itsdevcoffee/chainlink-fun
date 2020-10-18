@@ -11,7 +11,7 @@ services:
   chainlink:
     image: "smartcontract/chainlink"
     env_file: .env
-    pg_chainlink:
+    depends_on:
       - pg_chainlink
     ports:
       - "6688:6688"
