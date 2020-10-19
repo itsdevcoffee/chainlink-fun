@@ -1,12 +1,12 @@
 #!/bin/bash
 
+# Replaces the first parameter with the second parameter
 replaceText(){
     sed -i 's/'"$1"'/'"$2"'/' ./run-node/.env
 }
 
 editConfig(){
     STR=""
-    fileName="./run-node/wanko"
 
     echo What is your ETH URL?
     read STR
