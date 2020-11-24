@@ -23,7 +23,7 @@ Add the following:
 ```
 secret
 ```
-- Create `$PATH_TO_DIR/chainlink-volume/apicredntials.txt` - Credientials to login into the Chainlink UI
+- Create `$PATH_TO_DIR/chainlink-volume/apicredentials.txt` - Credientials to login into the Chainlink UI
 Add the following:
 ```
 test@test.tech
